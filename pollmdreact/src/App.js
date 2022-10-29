@@ -17,7 +17,7 @@ export default class App extends Component {
             <table className='table table-striped' aria-labelledby="tabelLabel">
                 <tbody>
                     {surveys.map(survey =>
-                        <tr key={survey.id}>
+                        <tr>
                             <td>{survey.name}</td>
                             <td>{survey.description}</td>
                         </tr>
@@ -42,7 +42,7 @@ export default class App extends Component {
     }
 
     async populateSurveyData() {
-        const response = await fetch('survey');
+        const response = await fetch("surveys");
         const data = await response.json();
         this.setState({ surveys: data, loading: false });
     }

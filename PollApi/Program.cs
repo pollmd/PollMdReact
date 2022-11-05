@@ -1,5 +1,7 @@
 using PollApi.Models;
 using Microsoft.EntityFrameworkCore;
+using PollApi;
+using PollApi.Repositories;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -12,6 +14,9 @@ builder.Services.AddSwaggerGen();
 
 var dbcon = builder.Configuration.GetValue<string>("dbConnectionStrings");
 builder.Services.AddDbContext<pollmdContext>(o=>o.UseSqlServer(dbcon));
+
+builder.Services.AddSingleton<DapperContext>();
+builder.Services.AddScoped<ISurveysRepository,SurveysRepository>();
 
 var app = builder.Build();
 

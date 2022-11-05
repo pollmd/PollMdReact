@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using PollApi.Models;
+using PollApi.Repositories;
 
 namespace PollApi.Controllers
 {
@@ -9,17 +10,35 @@ namespace PollApi.Controllers
     public class SurveysController : ControllerBase
     {
         private readonly pollmdContext _context;
+        private ISurveysRepository _repo { get; set; }
 
-        public SurveysController(pollmdContext context)
+        public SurveysController(pollmdContext context, ISurveysRepository repo)
         {
             _context = context;
+            _repo = repo;
         }
 
-        // GET: api/Surveys
+        //// GET: api/Surveys
+        //[HttpGet]
+        //public async Task<ActionResult<IEnumerable<Survey>>> GetSurveys()
+        //{
+        //    return await _context.Surveys.ToListAsync();
+        //}
+
+        // GET: api/SurveysDapper
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Survey>>> GetSurveys()
+        [Route("SurveysDapper")]
+        public async Task<ActionResult<IEnumerable<Survey>>> GetSurveysDapper()
         {
-            return await _context.Surveys.ToListAsync();
+            try
+            {
+                var result = await _repo.GetSurveys();
+                return Ok(result);
+            }
+            catch 
+            {
+                return BadRequest();
+            }
         }
 
         // GET: api/Surveys/5

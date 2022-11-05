@@ -1,4 +1,19 @@
 import React, { Component } from 'react';
+import Container from 'react-bootstrap/Container';
+//import Row from 'react-bootstrap/Row';
+//import Col from 'react-bootstrap/Col';
+
+//function ContainerFluidExample() {
+//    return (
+//        <Container fluid>
+//            <Row>
+//                <Col>1 of 1</Col>
+//            </Row>
+//        </Container>
+//    );
+//}
+
+//export default ContainerFluidExample;
 
 export default class App extends Component {
     static displayName = App.name;
@@ -14,16 +29,18 @@ export default class App extends Component {
 
     static renderSurveyTable(surveys) {
         return (
+            <Container fluid>
             <table className='table table-striped' aria-labelledby="tabelLabel">
                 <tbody>
                     {surveys.map(survey =>
-                        <tr>
+                        <tr key={survey.id}>
                             <td>{survey.name}</td>
                             <td>{survey.description}</td>
                         </tr>
                     )}
                 </tbody>
-            </table>
+                </table>
+            </Container>
         );
     }
 

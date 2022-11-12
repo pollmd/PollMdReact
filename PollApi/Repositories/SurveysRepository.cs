@@ -21,10 +21,18 @@ namespace PollApi.Repositories
 
             return result;
         }
+
+        [Obsolete("Methoda invechita")]
+        public async Task<IEnumerable<Survey>> GetSurveysEF()
+        {
+            //
+            return null;
+        }
     }
 
     public interface ISurveysRepository
     {
         Task<IEnumerable<Survey>> GetSurveys();
+        Task<IEnumerable<Survey>> GetSurveysEF();
     }
 }

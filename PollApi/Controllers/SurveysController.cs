@@ -18,20 +18,22 @@ namespace PollApi.Controllers
             _repo = repo;
         }
 
-        //// GET: api/Surveys
-        //[HttpGet]
-        //public async Task<ActionResult<IEnumerable<Survey>>> GetSurveys()
-        //{
-        //    return await _context.Surveys.ToListAsync();
-        //}
+        // GET: api/Surveys
+        [HttpGet]
+        public async Task<ActionResult<IEnumerable<Survey>>> GetSurveys()
+        {
+            return await _context.Surveys.ToListAsync();
+        }
 
         // GET: api/SurveysDapper
         [HttpGet]
         [Route("SurveysDapper")]
         public async Task<ActionResult<IEnumerable<Survey>>> GetSurveysDapper()
         {
+            _repo.GetType();
             try
             {
+                var testObsolete = await _repo.GetSurveysEF();
                 var result = await _repo.GetSurveys();
                 return Ok(result);
             }

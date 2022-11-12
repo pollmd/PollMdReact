@@ -5,7 +5,9 @@ VisualStudioVersion = 17.2.32630.192
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{54A90642-561A-4BB1-A94E-469ADEE60C69}") = "PollMdReact", "PollMdReact\PollMdReact.esproj", "{7D2A4E9B-FC20-41E7-8240-FC1E0C8453B9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PollApi", "PollApi\PollApi.csproj", "{AE81D40A-22B8-40DE-A319-B5E2C29DBFDB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PollApi", "PollApi\PollApi.csproj", "{AE81D40A-22B8-40DE-A319-B5E2C29DBFDB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReflectionSerialization", "ReflectionSerialization\ReflectionSerialization.csproj", "{9F3904A8-6443-4A1F-A512-9F1824FD4945}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,6 +25,10 @@ Global
 		{AE81D40A-22B8-40DE-A319-B5E2C29DBFDB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AE81D40A-22B8-40DE-A319-B5E2C29DBFDB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AE81D40A-22B8-40DE-A319-B5E2C29DBFDB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9F3904A8-6443-4A1F-A512-9F1824FD4945}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9F3904A8-6443-4A1F-A512-9F1824FD4945}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9F3904A8-6443-4A1F-A512-9F1824FD4945}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9F3904A8-6443-4A1F-A512-9F1824FD4945}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

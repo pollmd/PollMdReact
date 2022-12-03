@@ -7,7 +7,9 @@ Project("{54A90642-561A-4BB1-A94E-469ADEE60C69}") = "PollMdReact", "PollMdReact\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PollApi", "PollApi\PollApi.csproj", "{AE81D40A-22B8-40DE-A319-B5E2C29DBFDB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReflectionSerialization", "ReflectionSerialization\ReflectionSerialization.csproj", "{9F3904A8-6443-4A1F-A512-9F1824FD4945}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ReflectionSerialization", "ReflectionSerialization\ReflectionSerialization.csproj", "{9F3904A8-6443-4A1F-A512-9F1824FD4945}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestProject1", "TestProject1\TestProject1.csproj", "{DE77BE50-0BC8-48DC-A5AE-7AB5BADBC6FE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -29,6 +31,10 @@ Global
 		{9F3904A8-6443-4A1F-A512-9F1824FD4945}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9F3904A8-6443-4A1F-A512-9F1824FD4945}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9F3904A8-6443-4A1F-A512-9F1824FD4945}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DE77BE50-0BC8-48DC-A5AE-7AB5BADBC6FE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DE77BE50-0BC8-48DC-A5AE-7AB5BADBC6FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DE77BE50-0BC8-48DC-A5AE-7AB5BADBC6FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DE77BE50-0BC8-48DC-A5AE-7AB5BADBC6FE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
